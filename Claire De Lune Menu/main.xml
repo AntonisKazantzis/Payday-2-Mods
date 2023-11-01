@@ -1,0 +1,4 @@
+<table name="Claire De Lune Menu">
+    <Localization directory="loc" default="en.txt"/>
+    <MenuMusic id="Claire_De_Lune_Menu" source="sounds/menu.ogg"/>
+</table>

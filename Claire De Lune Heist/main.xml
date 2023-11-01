@@ -1,0 +1,9 @@
+<table name="Claire De Lune Heist">
+    <Localization directory="loc" default="en.txt"/>
+    <HeistMusic id="Claire_De_Lune_Heist" directory="sounds">
+        <event name="setup" source="stealth.ogg"/>
+        <event name="anticipation" source="buildup.ogg"/>
+        <event name="assault" source="assault.ogg"/>
+        <event name="control" source="control.ogg"/>
+    </HeistMusic>
+</table>
