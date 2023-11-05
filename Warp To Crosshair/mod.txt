@@ -8,7 +8,7 @@
 			"keybind_id" : "Warp",
 			"name" : "Warp To Crosshair",
 			"description" : "Teleport Where You Look",
-			"script_path" : "warp.lua",
+			"script_path" : "code.lua",
 			"run_in_menu" : false,
 			"run_in_game" : true,
 			"localized" : false
