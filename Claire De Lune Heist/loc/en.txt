@@ -1,0 +1,4 @@
+{
+    "menu_jukebox_Claire_De_Lune_Heist" : "Claire De Lune Heist",
+    "menu_jukebox_screen_Claire_De_Lune_Heist" : "Claire De Lune Heist"
+}

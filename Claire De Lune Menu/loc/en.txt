@@ -1,0 +1,5 @@
+{
+    "menu_jukebox_Claire_De_Lune_Menu" : "Claire De Lune Menu",
+    "menu_jukebox_screen_Claire_De_Lune_Menu" : "Claire De Lune Menu"
+
+}

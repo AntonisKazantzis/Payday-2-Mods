@@ -1,0 +1,10 @@
+<table name="Claire De Lune Stealth">
+    <Localization directory="loc" default="en.txt"/>
+	<StealthMusic directory="music" id="Claire_De_Lune_Stealth" volume="1">
+		<event name="suspense_1" source="suspense1.ogg"/>
+		<event name="suspense_2" source="suspense2.ogg"/>
+		<event name="suspense_3" source="suspense3.ogg"/>
+		<event name="suspense_4" source="suspense4.ogg"/>
+		<event name="suspense_5" source="suspense5.ogg"/>
+	</StealthMusic>
+</table>

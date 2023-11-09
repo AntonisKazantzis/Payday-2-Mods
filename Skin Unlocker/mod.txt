@@ -1,0 +1,10 @@
+{
+	"name": "name",
+	"version": "1.0",
+	"blt_version": 2,
+	"persist_scripts" :
+	[
+		{"global" : "SkinUnlocker", "script_path" : "code.lua"}
+	]
+}
+
