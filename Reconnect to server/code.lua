@@ -1,0 +1,108 @@
+ReconnectTS = ReconnectTS or {}
+ReconnectTS.SavePath = SavePath .. "ReconnectTSLastRoomID.txt"
+local function setDefaultKeybind(keybindName, defaultKey)
+    local bind = BLT.Keybinds:get_keybind(keybindName)
+    if not bind:HasKey() then
+        bind:SetKey(defaultKey)
+    end
+end
+
+setDefaultKeybind("ReconnectTSKeybind", "insert")
+setDefaultKeybind("CancelTSKeybind", "end")
+
+function ReconnectTS:SetLastRoomID(room_id)
+	local file = io.open(self.SavePath, "w")
+	if file then
+		file:write(room_id)
+		file:close()
+	else
+		log("[Reconnect to server] Failed to open file for writing.")
+	end
+end
+
+function ReconnectTS:ConnectToLast()
+	local room_id
+	local file = io.open(ReconnectTS.SavePath, "r")
+	if file then
+		room_id = file:read("*all")
+		file:close()
+	end
+	if room_id then
+		managers.network.matchmake:join_server_with_check(room_id)
+	else
+		QuickMenu:new("Oops", "Seems like there's no server to connect to :(", {}, true)
+	end
+end
+
+if RequiredScript == "lib/managers/crimenetmanager" then
+	Hooks:PostHook(CrimeNetGui, "init", "ReconnectInitGUI", function(self, ws, fullscreeen_ws, node)
+		local key = BLT.Keybinds:get_keybind("ReconnectTSKeybind"):Key() or "insert"
+		local reconnect_button = self._panel:text({
+			name = "reconnect_button",
+			text = string.upper("["..key.."]".." Reconnect"),
+			font_size = tweak_data.menu.pd2_small_font_size,
+			font = tweak_data.menu.pd2_small_font,
+			color = tweak_data.screen_colors.button_stage_3,
+			layer = 40,
+			y = 40,
+			blend_mode = "add"
+		})
+		self:make_fine_text(reconnect_button)
+		reconnect_button:set_right(self._panel:w() - 10)
+		self._fullscreen_ws:connect_keyboard(Input:keyboard())  
+		self._fullscreen_panel:key_press(callback(self, self, "KeyPressed"))    
+	end)
+
+	function CrimeNetGui:KeyPressed(o, k)
+        local keyReconnect = BLT.Keybinds:get_keybind("ReconnectTSKeybind"):Key() or "insert"
+        local keyCancel = BLT.Keybinds:get_keybind("CancelTSKeybind"):Key() or "end"
+        if k == Idstring(keyReconnect) and alive(self._panel:child("reconnect_button")) then
+            ReconnectTS:ConnectToLast()
+        elseif k == Idstring(keyCancel) and alive(self._panel:child("reconnect_button")) then
+            managers.system_menu:close("join_server")
+			managers.menu:show_failed_joining_dialog()
+        end
+    end
+
+	local orig_mouse_pressed = CrimeNetGui.mouse_pressed
+	function CrimeNetGui:mouse_pressed(o, button, x, y)
+		if not self._crimenet_enabled or self._getting_hacked then
+			return
+		end
+		local reconnect_button = self._panel:child("reconnect_button")
+		if alive(reconnect_button) and reconnect_button:inside(x, y) then
+			ReconnectTS:ConnectToLast()  
+			return true
+		end
+		return orig_mouse_pressed(self, o, button, x, y)
+	end
+
+	Hooks:PostHook(CrimeNetGui, "mouse_moved", "ReconnectTSMouseMoved", function(self, o, x, y)
+		if not self._crimenet_enabled or self._getting_hacked then
+			return
+		end
+		local reconnect_button = self._panel:child("reconnect_button")
+		if alive(reconnect_button) then
+			if reconnect_button:inside(x, y) then
+				if not self._reconnect_highlighted then
+					self._reconnect_highlighted = true
+					reconnect_button:set_color(tweak_data.screen_colors.button_stage_2)
+					managers.menu_component:post_event("highlight")
+				end
+			elseif self._reconnect_highlighted then
+				self._reconnect_highlighted = false
+				reconnect_button:set_color(tweak_data.screen_colors.button_stage_3)
+			end
+		end
+	end)
+elseif RequiredScript == "lib/network/matchmaking/networkmatchmakingsteam" then
+	Hooks:PostHook(NetworkMatchMakingSTEAM, "join_server", "SaveRoomIDReconnectTS", function(self, room_id)
+		ReconnectTS:SetLastRoomID(room_id)
+		log("[Reconnect to server] Saving room ID "..room_id)
+	end)
+elseif RequiredScript == "lib/network/matchmaking/networkmatchmakingepic" then
+	Hooks:PostHook(NetworkMatchMakingEPIC, "join_server", "SaveRoomIDReconnectTS", function(self, room_id)
+		ReconnectTS:SetLastRoomID(room_id)
+		log("[Reconnect to server] Saving room ID "..room_id)
+	end)
+end
