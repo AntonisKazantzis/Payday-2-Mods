@@ -24,7 +24,7 @@ This repository hosts an extensive collection of mods tailored to enhance your P
 ## How to Use
 
 1. **Download**: [Here](https://github.com/AntonisKazantzis/Payday-2-Mods/releases/download/v1.0/Payday.2.Mods.zip).
-2. **Installation**: Once downloaded, extract the ZIP file and navigate to the "mods" folder. Choose the mod(s) you're interested in and move them into the `steamapps\common\PAYDAY 2\mods` directory on your computer.
+2. **Installation**: Once downloaded, extract the ZIP file. Choose the mod(s) you're interested in and move them into the `steamapps\common\PAYDAY 2\mods` directory on your computer.
 3. **Finally**: Launch Payday 2.
 
 ---
