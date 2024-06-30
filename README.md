@@ -2,10 +2,6 @@
 
 Welcome to the Payday 2 Mods Repository! This repository houses a curated collection of custom mods for Payday 2, designed to enhance your gaming experience and offer new ways to enjoy the game.
 
-## About
-
-This repository hosts an extensive collection of mods tailored to enhance your Payday 2 gameplay. From custom soundtracks to gameplay tweaks and utility enhancements, each mod is crafted to provide players with a dynamic and immersive heisting experience. Whether you're seeking to fine-tune gameplay mechanics, unlock new customization options, or streamline your heists with utility tools, you'll find a diverse selection of mods here.
-
 ## Mods
 
 - **Claire De Lune Soundtrack**: Enhance your heisting experience by listening to Claire De Lune.
