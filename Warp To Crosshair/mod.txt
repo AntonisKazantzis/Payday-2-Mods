@@ -1,17 +1,19 @@
 {
-	"name": "name",
+    "name": "Wrap To Crosshair",
+    "description": "Instantly teleport to the location of your crosshair",
+    "author": "AntonisK",
 	"version": "1.0",
 	"blt_version": 2,
 	"keybinds" : 
 	[
 		{
-			"keybind_id" : "Warp",
-			"name" : "Warp To Crosshair",
-			"description" : "Teleport Where You Look",
-			"script_path" : "code.lua",
-			"run_in_menu" : false,
-			"run_in_game" : true,
-			"localized" : false
+			"keybind_id": "WarpTCKeybind",
+			"name": "Warp To Crosshair",
+			"description": "Instantly teleport to the location of your crosshair",
+			"script_path": "code.lua",
+			"run_in_menu": false,
+			"run_in_game": true,
+			"localized": false
         }
 	]
 }

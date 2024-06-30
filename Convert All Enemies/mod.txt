@@ -1,0 +1,19 @@
+{
+    "name": "Convert All Enemies",
+	"description": "Automatically convert all the available enemies in the map into jokers.",
+    "author": "AntonisK",
+	"version": "1.0",
+	"blt_version": 2,
+	"keybinds" : 
+	[
+		{
+			"keybind_id": "ConvertAEKeybind",
+			"name": "Convert All Enemies",
+			"description": "Automatically convert all the available enemies in the map into jokers.",
+			"script_path": "code.lua",
+			"run_in_menu": false,
+			"run_in_game": true,
+			"localized": false
+        }
+	]
+}

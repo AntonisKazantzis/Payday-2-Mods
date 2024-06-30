@@ -1,13 +1,15 @@
 {
-	"name": "name",
+    "name": "Drop All Bags",
+	"description" : "Drop all the bags you're currently carrying.",
+    "author": "AntonisK",
 	"version": "1.0",
 	"blt_version": 2,
 	"keybinds" : 
 	[
 		{
-			"keybind_id" : "Drop_All",
-			"name" : "Drop All",
-			"description" : "Drop All Bags",
+			"keybind_id" : "DropAllKeybind",
+			"name" : "Drop All Bags",
+			"description" : "Drop all the bags you're currently carrying.",
 			"script_path" : "code.lua",
 			"run_in_menu" : false,
 			"run_in_game" : true,

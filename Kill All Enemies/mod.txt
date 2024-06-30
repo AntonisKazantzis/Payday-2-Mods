@@ -1,0 +1,19 @@
+{
+    "name": "Kill All Enemies",
+	"description": "Quickly eliminate all enemies to clear a path or complete objectives.",
+    "author": "AntonisK",
+	"version": "1.0",
+	"blt_version": 2,
+	"keybinds": 
+	[
+		{
+			"keybind_id": "KillAEKeybind",
+			"name": "Kill All Enemies",
+			"description": "Quickly eliminate all enemies to clear a path or complete objectives.",
+			"script_path": "code.lua",
+			"run_in_menu": false,
+			"run_in_game": true,
+			"localized": false
+        }
+	]
+}

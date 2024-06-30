@@ -1,5 +1,7 @@
 {
-	"name": "name",
+    "name": "Complete All Side Jobs",
+    "description": "Automatically complete all side jobs to unlock their rewards without completing the objectives.",
+    "author": "AntonisK",
 	"version": "1.0",
 	"blt_version": 2,
 	"hooks":

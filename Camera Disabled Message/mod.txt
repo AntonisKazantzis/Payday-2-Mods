@@ -1,0 +1,13 @@
+{
+    "name": "Camera Disabled Message",
+    "description": "Automatically sends a message in chat when the security cameras are disabled.",
+    "author": "AntonisK",
+	"version": "1.0",
+	"blt_version": 2,
+    "hooks": [
+        {
+            "hook_id": "lib/units/props/securitycamera",
+            "script_path": "code.lua"
+        }
+    ]
+}

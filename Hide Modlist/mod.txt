@@ -1,7 +1,9 @@
 {
-	"name": "name",
+    "name": "Hide Modlist",
+    "description": "Conceal the list of specific installed mods.",
+    "author": "AntonisK",
 	"version": "1.0",
-	"blt_version" : 2,
+	"blt_version": 2,
 	"hooks": [
 		{
 			"hook_id": "lib/managers/menumanager",

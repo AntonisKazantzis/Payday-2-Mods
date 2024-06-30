@@ -1,0 +1,19 @@
+{
+    "name": "Tie All Civilians",
+    "description": "Subdue and tie up all civilians in the area for easier management during heists.",
+    "author": "AntonisK",
+	"version": "1.0",
+	"blt_version": 2,
+	"keybinds" : 
+	[
+		{
+			"keybind_id": "TieACKeybind",
+			"name": "Tie All Civilians",
+			"description": "Subdue and tie up all civilians in the area for easier management during heists.",
+			"script_path": "code.lua",
+			"run_in_menu": false,
+			"run_in_game": true,
+			"localized": false
+        }
+	]
+}

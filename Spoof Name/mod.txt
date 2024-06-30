@@ -1,5 +1,7 @@
 {
-	"name": "name",
+    "name": "Spoof Name",
+    "description": "Change your displayed player name to customize your identity in game.",
+    "author": "AntonisK",
 	"version": "1.0",
 	"blt_version": 2,
 	"persist_scripts" :
