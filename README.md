@@ -8,17 +8,18 @@ This repository hosts an extensive collection of mods tailored to enhance your P
 
 ## Mods
 
-- **Custom Soundtrack**: Enhance your heisting experience by listening to a new custom soundtrack.
-- **Warp to Crosshair**: Instantly teleport to the location of your crosshair for strategic positioning.
-- **Kill All NPCs**: Quickly eliminate all non-player characters to clear a path or complete objectives.
+- **Claire De Lune Soundtrack**: Enhance your heisting experience by listening to Claire De Lune.
+- **Warp to Crosshair**: Instantly teleport to the location of your crosshair.
+- **Kill All Enemies**: Quickly eliminate all enemies to clear a path or complete objectives.
+- **Camera Disabled Message**: Automatically sends a message in chat when the security cameras are disabled.
 - **Tie All Civilians**: Subdue and tie up all civilians in the area for easier management during heists.
-- **Hide Modlist**: Conceal the list of installed mods for a cleaner user interface.
-- **Spoof Player Name**: Change your displayed player name to customize your identity in multiplayer games.
-- **Skin Unlocker**: Unlock and access all weapon skins and customization options.
+- **Hide Modlist**: Conceal the list of specific installed mods.
+- **Spoof Name**: Change your displayed player name to customize your identity in game.
+- **Skin Unlocker**: Unlock and access specific weapon skins.
 - **Reconnect to Server**: Easily reconnect to a multiplayer server after disconnecting or experiencing connectivity issues.
-- **Drop All Carrying Bags**: Drop all bags you're currently carrying to lighten your load or facilitate teamwork.
-- **Convert All NPCs to Jokers**: Turn all non-player characters into allied "Joker" units to aid you in combat.
-- **Completion of All Side Jobs**: Automatically complete all side jobs to unlock their rewards without completing the objectives.
+- **Drop All Bags**: Drop all the bags you're currently carrying.
+- **Convert All Enemies**: Quickly convert all enemies in the map into jokers.
+- **Complete All Side Jobs**: Automatically complete all side jobs to unlock their rewards without completing the objectives.
 
 ## How to Use
 
