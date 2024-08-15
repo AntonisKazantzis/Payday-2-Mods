@@ -1,0 +1,44 @@
+{
+  "name": "Carry Stacker Revamped",
+  "description": "Carry Stacker Revamped - Now both nerfed and better at the same time!",
+  "author": "Lordmau5, enragedpixel, theo-ardouin, m-alorda, AntonisKazantzis",
+  "contact": "https://github.com/AntonisKazantzis",
+  "version": "v1.10.4",
+  "image" : "CarryStackerRevamped.png",
+  "color": "200 50 120",
+  "blt_version": 2,
+  "hooks": [
+    {
+      "hook_id": "lib/network/base/clientnetworksession",
+      "script_path": "lua/hooks/networkhandler.lua"
+    },
+    {
+      "hook_id": "lib/managers/menumanager",
+      "script_path": "lua/hooks/configuration_menu.lua"
+    },
+    {
+      "hook_id": "lib/managers/playermanager",
+      "script_path": "lua/hooks/playermanager.lua"
+    },
+    {
+      "hook_id": "lib/units/beings/player/states/playerstandard",
+      "script_path": "lua/hooks/playerstandard.lua"
+    },
+    {
+      "hook_id": "lib/units/beings/player/states/playercarry",
+      "script_path": "lua/hooks/playercarry.lua"
+    },
+    {
+      "hook_id": "lib/managers/playermanager",
+      "script_path": "lua/hooks/antianticheat.lua"
+    },
+    {
+      "hook_id": "lib/units/interactions/interactionext",
+      "script_path": "lua/hooks/interactionext.lua"
+    },
+    {
+      "hook_id": "lib/managers/group_ai_states/groupaistatebase",
+      "script_path": "lua/hooks/groupaistatebase.lua"
+    }
+  ],
+}
