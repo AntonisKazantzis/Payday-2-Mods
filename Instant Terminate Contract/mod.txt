@@ -1,0 +1,19 @@
+{
+	"name": "Instant Terminate Contract",
+	"description": "Instant terminate contract with a preset keybind",
+	"author": "AntonisK",
+	"version": "1.0",
+	"blt_version": 2,
+	"keybinds": 
+	[
+		{
+			"keybind_id": "ITCKeybind",
+			"name": "Instant Terminate Contract",
+			"description": "Instant terminate contract with a preset keybind",
+			"script_path": "code.lua",
+			"run_in_menu": false,
+			"run_in_game": true,
+			"localized": false
+		}
+	]
+}
