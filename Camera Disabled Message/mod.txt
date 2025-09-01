@@ -1,5 +1,5 @@
 {
-    "name": "Camera Disabled Message",
+    "name": "Camera Disabled Message (Host Only)",
     "description": "Automatically sends a message in chat when the security cameras are disabled.",
     "author": "AntonisK",
 	"version": "1.0",
