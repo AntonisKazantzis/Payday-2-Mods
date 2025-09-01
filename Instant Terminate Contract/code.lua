@@ -1,18 +1,26 @@
-local original_set_detection_enabled = SecurityCamera.set_detection_enabled
-
-local cameras_disabled = false
-
-local function send_camera_disabled_message()
-    if not cameras_disabled then
-        managers.chat:send_message(ChatManager.GAME, managers.network.account:username() or "System", "Security cameras are disabled!")
-        cameras_disabled = true
-    end
+function terminate_contract_yes()
+	managers.platform:set_playing(false)
+	managers.job:clear_saved_ghost_bonus()
+	managers.statistics:stop_session({
+		quit = true
+	})
+	managers.savefile:save_progress()
+	managers.job:deactivate_current_job()
+	managers.gage_assignment:deactivate_assignments()
+	managers.custom_safehouse:flush_completed_trophies()
+	managers.crime_spree:on_left_lobby()
+	managers.job:stop_sounds()
+	managers.experience:mission_xp_clear()
+	
+	if Network:multiplayer() then
+		Network:set_multiplayer(true)
+		managers.network:session():load_lobby()
+	end
+	
+	managers.preplanning:reset_rebuy_assets()
+	managers.menu:post_event("menu_exit")
+	managers.menu:close_menu("menu_pause")
+	setup:load_start_menu_lobby()
 end
 
-function SecurityCamera:set_detection_enabled(state, settings, mission_element, ...)
-    if not state then
-        send_camera_disabled_message()
-    end
-
-    return original_set_detection_enabled(self, state, settings, mission_element, ...)
-end
+terminate_contract_yes()
