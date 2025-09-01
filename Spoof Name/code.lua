@@ -1,30 +1,33 @@
-local Steam = Steam
-local steam_uid = Steam.userid
-local name = "Unknown"
+-- Store the desired name to spoof
+local spoofed_name = "Unknown"
 
-function update_name()
-    if not userid or userid == steam_uid(Steam) then
-        return name
-    else
-        return name
+-- Force our name whenever asked
+local orig_name = NetworkPeer.name
+function NetworkPeer:name()
+    if self == managers.network:session():local_peer() then
+        return spoofed_name
     end
+    return orig_name(self)
 end
 
-function update_name_spoof()
-    local s = managers.network:session()
-    if not s then
+-- Force set_name to keep spoofed for local peer
+local orig_set_name = NetworkPeer.set_name
+function NetworkPeer:set_name(name, ...)
+    if self == managers.network:session():local_peer() then
+        return orig_set_name(self, spoofed_name, ...)
+    end
+    return orig_set_name(self, name, ...)
+end
+
+-- Apply spoof when a peer is added
+Hooks:PostHook(NetworkManager, "on_peer_added", "SpoofOnPeerAdded", function(self, peer, peer_id)
+    local session = managers.network:session()
+    if not session then
         return
     end
 
-    local my_peer = s:local_peer()
-    my_peer:set_name(name)
-
-    for _, peer in pairs(s._peers) do
-        if not peer:loaded() or not my_peer:loaded() then
-            peer:send("request_player_name_reply", name)
-        end
+    local local_peer = session:local_peer()
+    if peer == local_peer then
+        peer:set_name(spoofed_name)
     end
-end
-
-update_name()
-update_name_spoof()
+end)
