@@ -2,6 +2,7 @@
     "name": "Camera Disabled Message (Host Only)",
     "description": "Automatically sends a message in chat when the security cameras are disabled.",
     "author": "AntonisK",
+    "contact": "https://modworkshop.net/mod/54129",
 	"version": "1.0",
 	"blt_version": 2,
     "hooks": [

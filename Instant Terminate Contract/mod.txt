@@ -2,7 +2,7 @@
 	"name": "Instant Terminate Contract",
 	"description": "Instant terminate contract with a preset keybind",
 	"author": "AntonisK",
-    "contact": "https://modworkshop.net/mod/54128",
+    "contact": "https://modworkshop.net/mod/54129",
 	"version": "1.0",
 	"blt_version": 2,
 	"keybinds": 
