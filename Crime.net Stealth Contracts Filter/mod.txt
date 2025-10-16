@@ -1,0 +1,14 @@
+{
+	"name": "Crime.net Stealth Contracts Filter",
+	"description": "Crime.net filter which shows all possible stealth heists only.",
+	"author": "Irbizzelus, AntonisK1",
+	"contact": "https://modworkshop.net/mod/54131",
+	"version": "1.0",
+	"blt_version": 2,
+	"hooks": [
+		{
+			"hook_id": "lib/network/matchmaking/networkmatchmakingepic",
+			"script_path" : "code.lua"
+		}
+	]
+}
