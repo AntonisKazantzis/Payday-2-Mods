@@ -1,7 +1,7 @@
 {
     "name": "Limit FPS On Focus Loss",
     "description": "Limits your game's FPS to 15 when it loses focus to save system resources and restore it automatically when you return.",
-    "author": "AntonisK1",
+    "author": "AntonisK",
     "contact": "https://modworkshop.net/mod/54127",
     "version": "1.0",
 	"blt_version": 2,
