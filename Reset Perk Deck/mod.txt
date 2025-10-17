@@ -1,0 +1,12 @@
+{
+    "name": "Reset Perk Deck",
+    "description": "Adds a quick menu when you equip/select a perk deck to reset it or not.",
+    "author": "AntonisK",
+    "contact": "https://modworkshop.net/mod/54149",
+    "blt_version": 2,
+    "version": "1.0",
+    "hooks": [
+        {"hook_id" : "lib/managers/skilltreemanager", "script_path" : "code.lua"},
+        {"hook_id" : "lib/managers/menu/skilltreegui", "script_path" : "code.lua"}
+    ]
+}
