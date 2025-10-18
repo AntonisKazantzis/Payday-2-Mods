@@ -28,19 +28,6 @@ function PlayerStandard:_get_unit_intimidation_action(...)
     return self:__get_unit_intimidation_action(...)
 end
 
--- Faster player zipline
-function ZipLine:update(unit, t, dt, ...)
-    if not self._enabled then return end
-
-    if self._usage_type == "person" then self._speed = 5000 end
-
-    self:_update_total_time()
-    self:_update_sled(t, dt)
-    self:_update_sounds(t, dt)
-
-    if ZipLine.DEBUG then self:debug_draw(t, dt) end
-end
-
 -- No camera rotation when holding a bag
 function PlayerCarry:enter(...)
     PlayerCarry.super.enter(self, ...)
@@ -59,20 +46,16 @@ function CoreEnvironmentControllerManager:hit_feedback_down() end
 function PlayerManager:carry_blocked_by_cooldown() return false end
 function PlayerStandard:_action_interact_forbidden() return false end
 
--- No cash penalty for killing civillians
-function MoneyManager:get_civilian_deduction() return 0 end
-function MoneyManager:civilian_killed() return end
-
 -- Disable small loot notifications
 function LootManager:show_small_loot_taken_hint(...) end
 
--- Remove recoil
+-- Remove camera recoil
 function PlayerCamera:play_shaker() end
 
 -- No camera limits
 function FPCameraPlayerBase:set_limits(spin, pitch) end
 
--- No recoil for weapon
+-- No recoil kick for weapon
 function FPCameraPlayerBase:recoil_kick() end
 
 -- No headbob
@@ -87,18 +70,6 @@ function CoreEnvironmentControllerManager:set_flashbang(...) end
 
 -- No fade to black
 function MenuComponentManager:play_transition() end
-
--- Weapon reload speed
-function NewRaycastWeaponBase:reload_speed_multiplier() return 1 end
-
--- Weapon swap speed
-function PlayerStandard:_get_swap_speed_multiplier() return 100 end
-
--- No melee delay 
-function PlayerStandard:_melee_repeat_allowed() return true end
-
--- 3x faster climbing
-tweak_data.player.movement_state.standard.movement.multiplier.climb = 3
 
 -- Infinite drawing points
 tweak_data.preplanning.gui.MAX_DRAW_POINTS = math.huge

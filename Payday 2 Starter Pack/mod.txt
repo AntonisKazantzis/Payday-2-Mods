@@ -6,12 +6,9 @@
 	"version": "1.0",
 	"blt_version": 2,
 	"hooks": [
-		{"hook_id": "lib/units/beings/player/playermovement","script_path": "code.lua"},
 		{"hook_id": "lib/units/beings/player/playerstandard","script_path": "code.lua"},
 		{"hook_id": "lib/managers/playermanager","script_path": "code.lua"},
 		{"hook_id": "lib/tweak_data/playertweakdata","script_path": "code.lua"},
-		{"hook_id": "lib/units/weapons/newraycastweaponbase","script_path": "code.lua"},
-		{"hook_id": "lib/managers/moneymanager","script_path": "code.lua"},
 		{"hook_id": "lib/tweak_data/preplanningtweakdata","script_path": "code.lua"},
 		{"hook_id": "lib/units/cameras/fpcameraplayerbase","script_path": "code.lua"},
 		{"hook_id": "lib/managers/explosionmanager","script_path": "code.lua"},
@@ -20,7 +17,6 @@
 		{"hook_id" : "lib/managers/lootmanager", "script_path" : "code.lua"},
 		{"hook_id" : "lib/units/beings/player/playercamera","script_path" : "code.lua"},
 		{"hook_id" : "lib/managers/menu/menucomponentmanager","script_path" : "code.lua"},
-        {"hook_id" : "lib/units/beings/player/playerdamage", "script_path" : "code.lua"},
-        {"hook_id" : "lib/units/props/zipline", "script_path" : "code.lua"}
+        {"hook_id" : "lib/units/beings/player/playerdamage", "script_path" : "code.lua"}
 	]
 }
