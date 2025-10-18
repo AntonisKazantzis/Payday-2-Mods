@@ -2,5 +2,5 @@ if not _PlayerTweakData_init then _PlayerTweakData_init = PlayerTweakData.init e
 function PlayerTweakData:init()
     _PlayerTweakData_init(self)
     
-    self.player.put_on_mask_time = 0
+    self.put_on_mask_time = 0
 end
