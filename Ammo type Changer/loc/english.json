@@ -1,0 +1,11 @@
+{
+    "ammotypechanger_title": "Ammo Type Changer",
+    "ammotypechanger_desc": "Change the ammo type fired by your weapons according to settings.",
+    "ammotypechanger_toggle_enabled_title": "Enable Ammo Type Changer",
+    "ammotypechanger_toggle_enabled_desc": "Turn the Ammo Type Changer mod on or off.",
+    "ammotypechanger_buttons_type_title": "Ammo Type Selection",
+    "ammotypechanger_type_desc": "Choose which ammo type your weapon will fire.",
+    "ammotypechanger_type_a": "Buckshot Ammo",
+    "ammotypechanger_type_b": "HE Ammo",
+    "ammotypechanger_type_c": "AP Ammo"
+}
