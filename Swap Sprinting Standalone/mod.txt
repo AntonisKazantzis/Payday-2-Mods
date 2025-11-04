@@ -1,0 +1,11 @@
+{
+	"name" : "Swap Sprinting Standalone",
+	"description" : "Keep running while swapping weapons",
+	"author" : "AntonisK1",
+	"contact" : "https://modworkshop.net/mod/54301",
+	"blt_version": 2,
+	"version" : "1.0",
+	"hooks" : [
+		{ "hook_id" : "lib/units/beings/player/states/playerstandard", "script_path" : "code.lua" }
+	]
+}
